@@ -18,17 +18,20 @@
 
 Se recomienda el uso de un entorno virtual para garantizar la supervivencia del sistema.
 
+### En PC o Servidor (Completo)
 ```bash
-# Clonar el inquisidor
 git clone https://github.com/Cyph3rVex/ghaudit.git
 cd ghaudit
-
-# Crear entorno virtual
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-
-# Instalar dependencias
+source venv/bin/activate
 pip install -r requirements.txt
+```
+
+### En Termux / Android (Ligero)
+Si experimentas errores con `pydantic-core` o `maturin` (Android API Level), usa el arsenal optimizado:
+```bash
+export ANDROID_API_LEVEL=24
+pip install -r requirements-termux.txt
 ```
 
 ## 🔑 Configuración
